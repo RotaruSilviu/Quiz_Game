@@ -4,9 +4,6 @@ from question_model import Question
 from data import question_data
 from quiz_brain import QuizBrain
 
-
-# In felul acesta am adaugat lista din question data in lista question bank dar ca obiecte,
-# si se pot folosii sau chema cu ajutorul clasei
 question_bank = []
 for question in question_data:
     question_text = question["question"]
