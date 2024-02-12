@@ -6,20 +6,11 @@ class QuizBrain:
         self.score = 0
 
     def still_has_questions(self):
-        # Putem scrie functia asa:
         return self.question_number < len(self.question_list)
-        # Sau puteam scrie asa functia:
-        # if self.question_number < len(self.question_list):
-        #     return True
-        # else:
-        #     return False
-        #
 
     def next_question(self):
         current_question = self.question_list[self.question_number]
         self.question_number += 1
-        # E confuza linia cu .text, dar trebuie sa ne gandim la clasa din question model,
-        # iar in felul acesta se afiseaza textul intrebarii.
         user_answer = input(f"Q.{self.question_number}: {current_question.text} (True/False): ")
         self.check_answer(user_answer, current_question.answer, current_question.true_answer)
 
